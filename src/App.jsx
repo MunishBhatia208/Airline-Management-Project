@@ -1,12 +1,14 @@
 import React from 'react'
 import Navbar from './assets/components/Navbar'
-import Slideshow from './assets/components/slideshow'
-
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-    </div>
+    <>
+      <img src="backgroundimage.jpg" width = "100%" className='overflow-scroll fixed' alt="" />
+      <div className='relative top-0'>
+          <Navbar/>
+      </div>
+    
+  </>
   )
 }
 
