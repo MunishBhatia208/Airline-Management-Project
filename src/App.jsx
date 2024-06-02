@@ -1,14 +1,19 @@
-import React from 'react'
-import Navbar from './assets/components/Navbar'
-const App = () => {
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import { Homepage } from "./pages/Home";
+import { Signup } from "./pages/Signup";
+import { Signin } from "./pages/Signin";
+
+function App() {
   return (
     <>
-      <img src="src/assets/images/backgroundimage.jpg" width = "100%" className='overflow-scroll fixed' alt="" />
-      <div className='relative top-0'>
-          <Navbar/>
-      </div>
-    
-  </>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/signup" element={<Signup/>} />
+    <Route path="/" element={<Homepage/>} />
+    <Route path="/signin" element={<Signin/>}></Route>
+    </Routes>
+    </BrowserRouter>
+    </>
   )
 }
 
